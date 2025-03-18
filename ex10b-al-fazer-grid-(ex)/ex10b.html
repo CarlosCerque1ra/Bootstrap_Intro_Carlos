@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Promoções da Loja</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <style>
         /* Centralizar o carrossel */
         .carousel-container {
@@ -16,14 +18,84 @@
         .carousel-inner img {
             margin: auto;
         }
+
+        span{
+            background-color: black;
+            display: flex;
+        }
     </style>
 </head>
 <body>
 
     
 
-    <!-- 1ª Digitação (Aqui) -->
+    <!-- Barra de navegação -->
 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand">CARLOS <i class="bi bi-airplane-engines ms-2"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <div class="nav-item">
+                        <a  class="nav-link" href="#"> Home</a>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#" class="nav-link">Produtos</a>
+                    </div>
+                    <div class="nav-item">
+                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#contatoModal">Entre em contato!
+                        </button>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Notificação desconto e barra de progresso -->
+    <h5 class="mt-4">Barra de progresso!</h5>
+    <div class="progress mb-3">
+       <div class="progress-bar progress-bar-striped progress-bar-animated" id="dynamicProgress" role="progressbar" style="width: 0%;">
+           0%
+       </div>
+    </div>
+
+    <!-- CONTROLE DA BARRA DE PROGRESSO -->
+    <div class="btn-group">
+        <button class="btn btn-secondary" id="decreaseBtn">-10%</button>
+        <button class="btn btn-secondary" id="increaseBtn">+10%</button>
+      </div>
+
+    <!-- Carrosel -->
+
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner mt-4">
+      <div class="carousel-item active">
+        <img src="https://placehold.co/600x400/0000CD/FFF" class="d-block w-50" alt="img1">
+      </div>
+      <div class="carousel-item">
+        <img src="https://placehold.co/600x400/20B2AA/FFF" class="d-block w-50" alt="img2">
+      </div>
+      <div class="carousel-item">
+        <img src="https://placehold.co/600x400/800000/FFF" class="d-block w-50" alt="img3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
